@@ -133,7 +133,7 @@ Each parameter sets the probability and limits of the augmentation techniques.
 
 #### Custom Random Crop 메서드 (Custom Random Crop Method)
 이 레포지토리의 핵심 기술이라고 할 수 있는 Albumentation에 없는 Custom 제작된 메서드 입니다. 이미지 상에 있는 ground truth인 bounding box를 지키면서 랜덤하게 crop합니다. 아래는 이에 대한 상세 설명입니다.
-![alt text](readme_img/image.png)
+![alt text](readme_img/image1.png)
 
 
 <상세 설명>
