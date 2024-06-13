@@ -1,0 +1,46 @@
+참고: https://yoonminlee.com/python-package-deployment-pypi-github-actions
+
+1. 코드를 완성한다
+
+2. setup.py를 완성한다. 아래는 양식 예시
+from setuptools import setup, find_packages
+
+# README 파일을 UTF-8 인코딩으로 읽어옵니다.
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setup(
+    name='yolo_auto_agmentation',
+    version='1.1.1',
+    description='enter dataset path with train, val, test. Then automatically augment every images to ready YOLO object detection train',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    author='Na-I-Eon',
+    author_email='112fkdldjs@naver.com',
+    url='https://github.com/Nyan-SouthKorea/yolo_auto_augmentation',
+    packages=find_packages(),
+    install_requires=[
+        'opencv-python', 'tqdm', 'albumentations', 'natsort'
+    ],
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+    ],
+    python_requires='>=3.8',
+)
+
+
+3. 터미널(아나콘다 가능)을 열어서 해당 프로젝트 폴더로 이동한다.
+
+4. 아래 패키지가 설치되어 있어야 한다.
+pip install setuptools wheel
+pip install twine
+
+5. 패키지를 빌드한다.
+python setup.py sdist bdist_wheel
+
+6. 배포한다.
+twine upload dist/*
+
+readme파일과 license파일이 잘 작성되어 있다면 pypi사이트 안에 들어갔을때 상세한 설명을 볼 수 있을것이다.
