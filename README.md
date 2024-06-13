@@ -135,7 +135,7 @@ Each parameter sets the probability and limits of the augmentation techniques.
 이 레포지토리의 핵심 기술이라고 할 수 있는 Albumentation에 없는 Custom 제작된 메서드 입니다. 이미지 상에 있는 ground truth인 bounding box를 지키면서 랜덤하게 crop합니다. 아래는 이에 대한 상세 설명입니다.
 This is a custom-made method that is not available in Albumentation and can be considered a core technology of this repository. It randomly crops while preserving the bounding box, which is the ground truth on the image. Below is a detailed explanation.
 
-![alt text](readme_img/image1.png)
+![alt text](https://github.com/Nyan-SouthKorea/YOLO_Auto_Agmentation/blob/main/readme_img/image1.png)
 
 
 <상세 설명> (Detailed Explanation)
