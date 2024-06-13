@@ -133,21 +133,26 @@ Each parameter sets the probability and limits of the augmentation techniques.
 
 #### Custom Random Crop 메서드 (Custom Random Crop Method)
 이 레포지토리의 핵심 기술이라고 할 수 있는 Albumentation에 없는 Custom 제작된 메서드 입니다. 이미지 상에 있는 ground truth인 bounding box를 지키면서 랜덤하게 crop합니다. 아래는 이에 대한 상세 설명입니다.
+This is a custom-made method that is not available in Albumentation and can be considered a core technology of this repository. It randomly crops while preserving the bounding box, which is the ground truth on the image. Below is a detailed explanation.
+
 ![alt text](readme_img/image1.png)
 
 
-<상세 설명>
+<상세 설명> (Detailed Explanation)
 YOLO형식의 img, label path를 입력받아 증강 후 원하는 path에 저장해준다.
-알고리즘 진행 순서:
-1. 고화질 이미지, 레이블 읽어오기
-2. random crop 진행(bbox를 해치지 않는 선에서)
-3. 나머지 빠른 증강을 위해 작은 이미지로 resize(640)
-4. 나머지 증강 효과 적용
-5. 저장
+It takes the YOLO format img, label path, augments them, and saves them to the desired path.
 
-이렇게 수행하는 이유는 아래와 같다
-- 랜덤 크롭 시 화질 저하를 막기 위해서
-- 나머지 증강시, 원본 이미지로 진행 시 시간이 너무 오래걸림
+
+알고리즘 진행 순서: (Algorithm Procedure)
+1. 고화질 이미지, 레이블 읽어오기 (Read high-quality images and labels) (Read high-quality images and labels)
+2. random crop 진행(bbox를 해치지 않는 선에서) (Perform random crop while preserving bbox)
+3. 나머지 빠른 증강을 위해 작은 이미지로 resize(640) (Resize to 640 for faster remaining augmentation)
+4. 나머지 증강 효과 적용 (Apply remaining augmentation effects)
+5. 저장 (Save)
+
+이렇게 수행하는 이유는 아래와 같다 (The reasons for this procedure are as follows:)
+- 랜덤 크롭 시 화질 저하를 막기 위해서 (To prevent quality degradation during random cropping)
+- 나머지 증강시, 원본 이미지로 진행 시 시간이 너무 오래걸림 (To avoid excessive processing time when performing the remaining augmentation on the original image)
 
 ```python
 def random_crop(self, img, bboxes, p=0.5):
@@ -268,3 +273,6 @@ https://github.com/Nyan-SouthKorea/YOLO_Auto_Agmentation
 
 ## Pypi 주소 (PyPI URL)
 https://pypi.org/project/yolo-auto-agmentation/ 
+
+## 네이버 블로그 주소 (Naver Blog URL)
+https://blog.naver.com/112fkdldjs 
