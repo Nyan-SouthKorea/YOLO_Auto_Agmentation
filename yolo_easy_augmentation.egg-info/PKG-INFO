@@ -1,3 +1,21 @@
+Metadata-Version: 2.1
+Name: yolo-easy-augmentation
+Version: 1.0.1
+Summary: enter dataset path with train, val, test. Then automatically augment every images to ready YOLO object detection train
+Home-page: https://github.com/Nyan-SouthKorea/yolo_auto_augmentation
+Author: Na-I-Eon
+Author-email: 112fkdldjs@naver.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: opencv-python
+Requires-Dist: tqdm
+Requires-Dist: albumentations
+Requires-Dist: natsort
+
 # YOLO_Easy_Augmentation
 
 ## 소개 (Introduction)
