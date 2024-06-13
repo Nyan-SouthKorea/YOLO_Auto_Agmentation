@@ -1,0 +1,7 @@
+__pycache__/
+build/
+dist/
+tmp/
+yolo_auto_agmentation.egg-info/
+__init__.py
+setup.py
