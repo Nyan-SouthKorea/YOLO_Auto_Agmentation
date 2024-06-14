@@ -1,6 +1,8 @@
 LICENSE.txt
 README.md
 setup.py
+yolo_easy_augmentation/__init__.py
+yolo_easy_augmentation/yolo_easy_augmentation.py
 yolo_easy_augmentation.egg-info/PKG-INFO
 yolo_easy_augmentation.egg-info/SOURCES.txt
 yolo_easy_augmentation.egg-info/dependency_links.txt

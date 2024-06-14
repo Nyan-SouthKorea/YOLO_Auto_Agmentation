@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='yolo_easy_augmentation',
-    version='1.0.1',
+    version='1.0.7',
     description='enter dataset path with train, val, test. Then automatically augment every images to ready YOLO object detection train',
     long_description=long_description,
     long_description_content_type='text/markdown',

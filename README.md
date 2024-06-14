@@ -1,9 +1,9 @@
 # YOLO_Easy_Augmentation
 
 ## 소개 (Introduction)
-`yolo_auto_agmentation`은 YOLO 형식의 데이터셋을 자동으로 증강 및 시각화할 수 있는 Python 패키지입니다. 이 패키지는 다양한 이미지 증강 기법을 사용하여 데이터셋을 풍부하게 만들고, 증강된 이미지를 시각화하여 확인할 수 있는 기능을 제공합니다.
+`yolo_easy_augmentation`은 YOLO 형식의 데이터셋을 자동으로 증강 및 시각화할 수 있는 Python 패키지입니다. 이 패키지는 다양한 이미지 증강 기법을 사용하여 데이터셋을 풍부하게 만들고, 증강된 이미지를 시각화하여 확인할 수 있는 기능을 제공합니다.
 
-`yolo_auto_agmentation` is a Python package that allows automatic augmentation and visualization of datasets in YOLO format. This package uses various image augmentation techniques to enrich the dataset and provides functionality to visualize augmented images.
+`yolo_easy_augmentation` is a Python package that allows automatic augmentation and visualization of datasets in YOLO format. This package uses various image augmentation techniques to enrich the dataset and provides functionality to visualize augmented images.
 
 ## 설치 (Installation)
 
@@ -11,7 +11,11 @@
 PyPI에 배포된 패키지를 설치하려면 다음 명령어를 사용하세요:
 To install the package published on PyPI, use the following command:
 ```bash
-pip install yolo-auto-agmentation
+pip install yolo-easy-augmentation
+```
+or 
+```bash
+pip install yolo_easy_augmentation
 ```
 
 ## requirements.txt를 통한 설치 (Install via requirements.txt)
@@ -33,7 +37,7 @@ natsort
 You can automatically augment a dataset in YOLO format using the auto_augment method. Here is an example:
 
 ```python
-from yolo_auto_agment import Img_aug
+from yolo_easy_augmentation import Img_aug
 
 img_aug = Img_aug()
 img_aug.auto_augment(dataset_path='test_dataset', repeat=3)
@@ -48,7 +52,7 @@ The above code augments the data in the `test_dataset folder` three times. The a
 You can visualize the bounding boxes of augmented images using the `auto_draw` method. Here is an example:
 
 ```python
-from yolo_auto_agment import Img_aug
+from yolo_easy_augmentation import Img_aug
 
 img_aug = Img_aug()
 img_aug.auto_draw(auged_path='test_dataset_aug')
@@ -104,8 +108,8 @@ dataset_path
 
 - `labels` folder: Contains YOLO format label files (e.g., .txt) corresponding to each image
 
-이 구조에 따라 데이터를 구성하면 `yolo_auto_agmentation` 패키지를 사용하여 데이터 증강 및 시각화를 쉽게 수행할 수 있습니다.
-If you organize your data according to this structure, you can easily perform data augmentation and visualization using the `yolo_auto_agmentation` package.
+이 구조에 따라 데이터를 구성하면 `yolo_easy_augmentation` 패키지를 사용하여 데이터 증강 및 시각화를 쉽게 수행할 수 있습니다.
+If you organize your data according to this structure, you can easily perform data augmentation and visualization using the `yolo_easy_augmentation` package.
 
 
 
@@ -135,7 +139,7 @@ Each parameter sets the probability and limits of the augmentation techniques.
 이 레포지토리의 핵심 기술이라고 할 수 있는 Albumentation에 없는 Custom 제작된 메서드 입니다. 이미지 상에 있는 ground truth인 bounding box를 지키면서 랜덤하게 crop합니다. 아래는 이에 대한 상세 설명입니다.
 This is a custom-made method that is not available in Albumentation and can be considered a core technology of this repository. It randomly crops while preserving the bounding box, which is the ground truth on the image. Below is a detailed explanation.
 
-![alt text](https://raw.githubusercontent.com/Nyan-SouthKorea/YOLO_Auto_Agmentation/main/readme_img/image1.png)
+![alt text](https://raw.githubusercontent.com/Nyan-SouthKorea/YOLO_Easy_Augmentation/main/readme_img/image1.png)
 
 
 <상세 설명> (Detailed Explanation)
@@ -244,11 +248,11 @@ auto_draw(auged_path, rand=True, ea=1000)
 
 
 ## 예제 코드 (Example Code)
-다음은 yolo_auto_agmentation 패키지를 사용하는 간단한 예제 코드입니다:
-Here is a simple example code using the yolo_auto_agmentation package:
+다음은 yolo_easy_augmentation 패키지를 사용하는 간단한 예제 코드입니다:
+Here is a simple example code using the yolo_easy_augmentation package:
 
 ```python
-from yolo_auto_agment import Img_aug
+from yolo_easy_augmentation import Img_aug
 
 # 인스턴스 생성
 img_aug = Img_aug()

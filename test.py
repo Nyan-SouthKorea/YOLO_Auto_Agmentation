@@ -1,4 +1,4 @@
-from yolo_auto_agment import Img_aug
+from yolo_easy_augmentation import Img_aug
 
 img_aug = Img_aug()
 
